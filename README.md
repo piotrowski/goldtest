@@ -1,9 +1,10 @@
 # goldtest
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/apiotrowski312/goldtest)](https://goreportcard.com/report/github.com/apiotrowski312/goldtest)
 [![GoDoc](https://godoc.org/github.com/xorcare/golden?status.svg)](https://godoc.org/github.com/apiotrowski312/goldtest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/apiotrowski312/goldtest)](https://goreportcard.com/report/github.com/apiotrowski312/goldtest)
 [![codecov](https://codecov.io/gh/xorcare/golden/badge.svg)](https://codecov.io/gh/apiotrowski312/goldtest)
 ![coverage](https://github.com/apiotrowski312/goldtest/workflows/Get%20Unit%20Test%20Coverage/badge.svg)
+
 goldtest is a simple package that improves experience working with golden files. It allows you to assert any type of data with saved golden file. Currently there are three exported functions, I believe it should be enough for most cases. If you see room for improvement please, leave an issue or pull request.
 
 ## What is Golden file?

@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/xorcare/golden/badge.svg)](https://codecov.io/gh/apiotrowski312/goldtest)
 ![coverage](https://github.com/apiotrowski312/goldtest/workflows/Build/badge.svg)
 
-goldtest is a simple package that improves experience working with golden files. It allows you to assert any type of data with saved golden file. Currently there are three exported functions, I believe it should be enough for most cases. If you see room for improvement please, leave an issue or pull request.
+goldtest is a simple package that improves experience of working with golden files. It allows you to assert any type of data with saved golden file. Currently there are three exported functions, I believe it should be enough for most cases. If you see room for improvement, please leave an issue or pull request.
 
 ## What is Golden file?
 
@@ -31,7 +31,7 @@ Both works similar for build-in types (Eg. string, int, float32 etc.). Output is
 
 I suggest using JSON when you have to work with big data structures as it will be more readable.
 
-> **Note**: As you can see here: [BYTE_TO_BYTE](testdir/testfile_byte.golden) [BYTE_TO_JSONBYTE](testdir/json_testfile_byte.golden), there is wrong output, when using AssertJSON(). This is how it is, so if you want use golden_file for bytes, consider using Assert()
+> **Note**: As you can see here: [Assert](testdir/testfile_byte.golden) [AssertJSON](testdir/json_testfile_byte.golden), there is wrong output, when using AssertJSON(). This is how it is, so if you want use golden_file for bytes, consider using Assert()
 
 Example can be found in [example directory](example/main_test.go)
 

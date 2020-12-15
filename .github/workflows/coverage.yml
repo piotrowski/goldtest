@@ -1,4 +1,4 @@
-name: Get Unit Test Coverage
+name: Build
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         golint -set_exit_status=1 .
     
     - name: Test With Coverage
-      run: go test -v  -coverprofile=coverage.txt -covermode=atomic ./...
+      run: go test -coverprofile=coverage.txt ./...
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1

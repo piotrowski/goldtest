@@ -1,4 +1,4 @@
-module goldtesting
+module github.com/apiotrowski312/goldtest
 
 go 1.14
 

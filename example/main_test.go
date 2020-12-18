@@ -11,6 +11,7 @@ func TestCreateTree(t *testing.T) {
 		size     int
 		filename string
 	}{
+		{"Simple example of JSON", 10, "testdata/node10"},
 		{"Simple example of JSON", 100, "testdata/node100"},
 		{"Simple example of JSON", 500, "testdata/node500"},
 	}
@@ -29,8 +30,8 @@ func TestSum(t *testing.T) {
 		num      [2]int
 		filename string
 	}{
-		{"Simple example of JSON", [2]int{1, 2}, "testdata/sum12"},
-		{"Simple example of JSON", [2]int{1234, 1234}, "testdata/sum12341234"},
+		{"1+2", [2]int{1, 2}, "testdata/sum12"},
+		{"1234+1234", [2]int{1234, 1234}, "testdata/sum12341234"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

@@ -28,7 +28,9 @@ func prepareDirPath(path string) string {
 }
 
 func readFile(fileName string) ([]byte, error) {
-	expected, err := ioutil.ReadFile(preparePath(removeSpecialCharacters(fileName)))
+	fileName = removeSpecialCharacters(fileName)
+
+	expected, err := ioutil.ReadFile(preparePath(fileName))
 	if err != nil {
 		return nil, err
 	}
@@ -37,7 +39,8 @@ func readFile(fileName string) ([]byte, error) {
 
 func writeFile(fileName string, bytes []byte) error {
 	syscall.Umask(0)
-	if dirPath := prepareDirPath(removeSpecialCharacters(fileName)); dirPath != "" {
+	fileName = removeSpecialCharacters(fileName)
+	if dirPath := prepareDirPath(fileName); dirPath != "" {
 		if _, err := os.Stat(dirPath); err != nil {
 			if err := os.MkdirAll(dirPath, 0777); err != nil {
 				return fmt.Errorf("Directory %s could not be created: %s", dirPath, err)

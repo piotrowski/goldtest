@@ -1,8 +1,9 @@
 package example
 
 import (
-	goldtest "goldtesting"
 	"testing"
+
+	"github.com/apiotrowski312/goldtest"
 )
 
 func TestCreateTree(t *testing.T) {

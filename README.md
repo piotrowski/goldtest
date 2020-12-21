@@ -11,6 +11,8 @@ goldtest is a simple package that improves experience of working with golden fil
 
 Golden file is another way to store "expected output" of a function. One "golden file" stands for output from one test case. Usually those files are stored in separated files, in directory "testdata".
 
+Example usage is in [example](example/) directory. Also you can read a little bit more about package in [THIS](https://apiotrowski.xyz/posts/packages/goldtest/) blog post
+
 You can read more about it here:
 
 - https://medium.com/@jarifibrahim/golden-files-why-you-should-use-them-47087ec994bf

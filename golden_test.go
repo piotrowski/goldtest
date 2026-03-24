@@ -1,7 +1,6 @@
 package goldtest
 
 import (
-	"os"
 	"testing"
 )
 
@@ -85,13 +84,4 @@ func TestAssertJSON(t *testing.T) {
 			AssertJSON(tt.args.t, tt.args.actual, tt.args.fileName)
 		})
 	}
-}
-
-func TestAssertImage(t *testing.T) {
-	imageBytes, err := os.ReadFile("testdir/test-tileset.png")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	AssertImage(t, imageBytes, "testdir/test-tileset.png")
 }

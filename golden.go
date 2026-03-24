@@ -59,24 +59,6 @@ func AssertJSON(t *testing.T, actual any, fileName string) {
 	assert.Equal(t, actualBytes, goldenBytes)
 }
 
-// AssertImage - allow testing image or other binary data. Function is able to load,
-// update or create golden file and compare it with provided bytes.
-// Unlike Assert, the fileName is used as-is (no sanitization) to preserve extensions like .png.
-func AssertImage(t *testing.T, actual []byte, fileName string) {
-	if *update {
-		if err := writeImageFile(fileName, actual); err != nil {
-			t.Fatal(err)
-		}
-	}
-
-	goldenBytes, err := readImageFile(fileName)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	assert.Equal(t, actual, goldenBytes)
-}
-
 func marshal(dataToMarshal any) ([]byte, error) {
 	bytes, err := json.MarshalIndent(dataToMarshal, "", "\t")
 	if err != nil {

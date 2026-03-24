@@ -32,7 +32,12 @@ func GetGoldenFile(actual []byte, fileName string) ([]byte, error) {
 // update or create golden file and compare it with provided interface.
 // Bytes for goldenfiles are created by converting interface to string, then to byte array.
 func Assert(t *testing.T, actual any, fileName string) {
-	actualBytes := []byte(fmt.Sprintf("%v", actual))
+	var actualBytes []byte
+	if b, ok := actual.([]byte); ok {
+		actualBytes = b
+	} else {
+		actualBytes = []byte(fmt.Sprintf("%v", actual))
+	}
 
 	goldenBytes, err := GetGoldenFile(actualBytes, fileName)
 	if err != nil {

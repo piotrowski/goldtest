@@ -1,4 +1,4 @@
-module github.com/apiotrowski312/goldtest
+module github.com/piotrowski/goldtest
 
 go 1.25.6
 

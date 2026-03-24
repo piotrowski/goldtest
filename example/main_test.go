@@ -3,7 +3,7 @@ package example
 import (
 	"testing"
 
-	"github.com/apiotrowski312/goldtest"
+	"github.com/piotrowski/goldtest"
 )
 
 func TestCreateTree(t *testing.T) {
